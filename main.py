@@ -22,7 +22,7 @@ from PyQt6.QtWidgets import (
 )
 
 
-class DatabaseConnection:
+class ExtDatabaseConnection:
     def __init__(
         self,
         host="localhost",
@@ -51,7 +51,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Student Mangement System")
         self.setMinimumSize(640, 480)
 
-        self.db = DatabaseConnection()
+        self.db = ExtDatabaseConnection()
 
         # Create file path objects for db and icons
         basepath = Path(Path(__file__).parent)
